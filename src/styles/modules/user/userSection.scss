@@ -1,0 +1,16 @@
+.user-section {
+  width: 100%;
+  padding: 5rem;
+  background-color: #e9ebee;
+  @include global {
+    padding: 0;
+  }
+  &_title {
+    color: #385898;
+  }
+
+  &-purple {
+    background-color: #621bd5;
+  }
+  padding-bottom: 30rem;
+}

@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Admin from "./admin/admin";
+import Login from "./components/login/login";
+import LogOut from "./components/logout/logout";
+import NotFound from "./components/not-found/notFound";
+import { Switch, Route, Redirect } from "react-router-dom";
+import UserRoute from "./components/protectedRoute/userRoute";
+import ProtectedRoute from "./components/protectedRoute/protectedRoute";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import User from "./user/user";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToastContainer />
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/logout" component={LogOut} />
+        <ProtectedRoute path="/admin" component={Admin} />
+        <UserRoute path="/user" component={User} />
+        <Route path="/reg" component={RegistrationForm} />
+        <Route path="/not-found" component={NotFound} />
+        <Redirect from="/" to="/login" exact />
+        <Redirect to="/not-found" />
+      </Switch>
     </div>
   );
 }

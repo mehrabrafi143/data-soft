@@ -1,0 +1,20 @@
+.btn {
+  padding: 1rem;
+  width: 15rem;
+  font-size: 2rem;
+  background-color: $color-sky;
+}
+
+.update-btn {
+  font-size: 2.5rem;
+  color: $color-sky;
+  display: inline;
+  cursor: pointer;
+}
+
+.delete-btn {
+  font-size: 2.5rem;
+  color: $color-red;
+  display: inline;
+  cursor: pointer;
+}

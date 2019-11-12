@@ -1,0 +1,59 @@
+.usernavbar {
+  background-color: #fff;
+  height: 6.6rem;
+  z-index: 99999999999999999999999;
+  a {
+    &:link,
+    &:visited,
+    &:focus {
+      color: $color-font-primary;
+      text-align: center;
+      margin-right: 1.3rem;
+    }
+  }
+
+  .navbar-nav {
+    background-color: transparent;
+  }
+  .right-align {
+    position: absolute;
+    right: 20rem;
+    @include global {
+      position: relative;
+      right: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $color-sky;
+    border: none;
+    width: 30rem;
+    margin-top: 0.8rem;
+    border-radius: none;
+    margin-top: 2.2rem;
+    @include global {
+      margin-top: 0;
+    }
+    a {
+      &:link,
+      &:visited {
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.6rem;
+      }
+      &:focus,
+      &:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+  .fa-bars {
+    color: #4267b2;
+    font-size: 1.5rem;
+  }
+  .navbar-toggler {
+    background-color: #fff;
+  }
+}
